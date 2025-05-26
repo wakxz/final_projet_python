@@ -1,0 +1,22 @@
+Présentation et but du projet
+
+Le projet dénommé « Gestionnaire d’excuses étudiantes » vise à simplifier le processus de gestion et de suivi des excuses fournies par les étudiants, surtout dans un environnement académique ou administratif. Cette application, créée en Python, utilise une interface graphique développée avec Tkinter, associée à une base de données MySQL permettant de conserver les données de façon durable. L’objectif principal de cette initiative est de proposer un outil à la fois pratique et fonctionnel pour ajouter, modifier, supprimer et visualiser des excuses, tout en liant ces excuses aux étudiants inscrits. Par ailleurs, des analyses statistiques sont produites pour évaluer la crédibilité des excuses avec des notes attribuées.
+
+Fonctionnement général
+
+L’application est fondée sur une structure simple mais bien organisée. Une base de données MySQL comprend deux tables principales : étudiants et excuses, qui sont interconnectées par une relation de clé étrangère. Chaque excuse est associée à un étudiant spécifique. Une interface graphique conçue avec Tkinter permet à l’utilisateur d'utiliser l’application sans avoir à rédiger de requêtes SQL. Ainsi, les utilisateurs peuvent :
+- Créer un nouvel étudiant (en fournissant le nom, le prénom, l’email et la date d’inscription),
+- Ajouter une excuse pour un étudiant choisi (en indiquant le texte de l’excuse, la date et une note sur 5 qui représente la crédibilité),
+- Modifier ou supprimer une excuse déjà existante,
+- Afficher toutes les excuses dans une liste déroulante,
+- Produire un graphique avec matplotlib pour représenter les excuses les plus crédibles (en moyenne) de manière claire et intuitive.
+
+Le programme se compose de plusieurs classes Python : une classe GestionExcuses pour gérer la connexion à la base de données, une classe Etudiant pour les tâches relatives aux étudiants, une classe Excuse pour les opérations sur les excuses, et une classe Interface qui gère l’affichage ainsi que les interactions avec l’utilisateur. L’approche orientée objet permet une répartition efficace des responsabilités et rend la maintenance du code plus aisée.
+
+Mise en place et exécution
+
+Pour réaliser ce projet, l’utilisateur doit tout d’abord avoir un serveur MySQL opérationnel. Il est ensuite nécessaire d’exécuter un script SQL fourni qui crée la base de données gestion_excuses, les deux tables indispensables, ainsi qu’un utilisateur MySQL nommé etudiant avec les permissions adéquates. Une fois la base de données établie, il suffit d’exécuter le script Python (. py) depuis un terminal ou un éditeur tel que VS Code ou PyCharm.
+Avant de pouvoir saisir des excuses, il est nécessaire de créer au moins un étudiant en utilisant le bouton approprié. Par la suite, il est possible d'entrer, de modifier ou de supprimer des excuses, et toutes les modifications se synchronisent automatiquement avec la base de données. L'utilisation de matplotlib pour les statistiques permet d'obtenir une vue d'ensemble des excuses les plus fréquentes et les plus fiables selon la note moyenne qui leur a été donnée.
+
+Conclusion
+Pour conclure, ce projet offre une solution intégrale pour gérer les excuses des étudiants de façon ordonnée et visuelle. Il combine l'interactivité d'une interface graphique avec l'efficacité d'un système de gestion de base de données. Son utilisation est pertinente dans des environnements éducatifs, administratifs ou même comme exercice pour apprendre à manipuler des bases de données et des interfaces graphiques en Python. Avec sa facilité d'emploi et son code compréhensible, il est facilement adaptable pour intégrer des fonctionnalités futures telles que l'exportation en CSV, la recherche avancée, ou la gestion des utilisateurs.
